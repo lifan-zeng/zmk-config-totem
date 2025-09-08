@@ -171,6 +171,6 @@
                 &none       &kp F11    &kp F12    &none      &none      &none      &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
                                                   &kp ESC    &kp SPACE  &kp TAB    &trans        &trans     &trans
             >;
-        }
+        };
     };
 };
