@@ -28,6 +28,14 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&mo 1z>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,7 +62,7 @@
 
             bindings = <
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
-                           &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp QUOT
+                           &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SQT
                 &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
                                           &lt SYM ESC    &kp SPACE  &lt NUM TAB  &lt NAV RET  &kp BSPC  &lt FUN DEL
             >;
@@ -76,7 +84,7 @@
                         ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                         │   END   │    ←    │    ↓    │    →    │   CAPS  ││         │  shift  │   cmd   │   alt   │  ctrl   │    
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-              │         │   undo  │   cut   │   copy  │   paste │   redo  ││         │         │         │         │         │         │
+              │         │  PvTab  │  NxTab  │  PvWin  │  NxWin  │         ││         │         │         │         │         │         │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                             │   ESC   │  SPACE  │   TAB   ││    ▼    │    ▼    │    ▼    │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
@@ -84,7 +92,7 @@
             bindings = <
                             &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
                             &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &sk LSHFT  &sk LGUI   &sk LALT   &sk LCTRL
-                &none       &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)   &kp LG(LS(Z))    &none      &none      &none      &none      &none      &none
+                &none       &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TAB))  &kp LG(TAB)   &none    &none      &none      &none      &none      &none      &none
                                                     &kp ESC    &kp SPACE   &kp TAB     &trans     &trans     &trans
             >;
         };
@@ -113,7 +121,7 @@
             bindings = <
                             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp LBKT   &kp LT     &kp EQL    &kp GT     &kp RBKT
                             &sk LCTRL  &sk LALT   &sk LGUI   &sk LSHFT  &kp CARET   &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR   &kp RBRC
-                &kp BSLH    &kp GRAVE  &kp TILDE  &kp SCLN   &kp UNDER  &none       &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
+                &kp BSLH    &kp GRAVE  &kp TILDE  &kp SEMI   &kp UNDER  &none       &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
                                                   &trans     &trans     &trans      &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
