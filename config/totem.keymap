@@ -35,6 +35,12 @@
             key-positions = <33 34>;
             bindings = <&mo 1>;
         };
+
+        combo_key_repeat {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&key_repeat>;
+        }
     };
     keymap {
         compatible = "zmk,keymap";
@@ -55,7 +61,7 @@
                         ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                         │    A    │    S    │    D    │    F    │    G    ││    H    │    J    │    K    │    L    │    '    │    
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-              │  REPEAT │    Z    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,    │    .    │    /    │  SHIFT  │
+              │  SHIFT  │    Z    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,    │    .    │    /    │  SHIFT  │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                             │   ESC   │  SPACE  │   TAB   ││  ENTER  │   BSPC  │   DEL   │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/ 
@@ -63,7 +69,7 @@
             bindings = <
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
                            &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SQT
-              &key_repeat  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
+              &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
                                           &lt SYM ESC    &kp SPACE  &lt NUM TAB  &lt NAV RET  &kp BSPC  &lt FUN DEL
             >;
         };
@@ -91,7 +97,7 @@
 
             bindings = <
                             &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
-                            &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &sk LSHFT  &sk LGUI   &sk LALT   &sk LCTRL
+                            &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &sk RSHFT  &sk RGUI   &sk RALT   &sk RCTRL
                 &none       &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TAB))  &kp LG(TAB)   &none    &none      &none      &none      &none      &none      &none
                                                     &kp ESC    &kp SPACE   &kp TAB     &trans     &trans     &trans
             >;
@@ -175,7 +181,7 @@
 
                         bindings = <
                             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &bt BT_SEL 2  &kp C_PREV   &kp C_PP   &kp C_NEXT   &none
-                            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &sk LSHFT    &sk LGUI   &sk LALT   &sk LCTRL
+                            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &sk RSHFT    &sk RGUI   &sk RALT   &sk RCTRL
                 &none       &kp F11    &kp F12    &none      &none      &none      &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
                                                   &kp ESC    &kp SPACE  &kp TAB    &trans        &trans     &trans
             >;
