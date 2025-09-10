@@ -15,6 +15,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "includes/behaviors_homerow_mods.dtsi"
+#include "includes/settings.dtsi"
+
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -66,7 +69,7 @@
 
             bindings = <
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
-                           &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SQT
+                    &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G  &kp H  &hm_shift_r RSHFT J &hm_r RGUI K  &hm_r RALT K  &hm_r RCTRL SQT
               &kp ESC      &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &key_repeat
                                           &lt NUM RET    &kp SPACE  &lt SYM TAB   &kp RSHFT  &kp BSPC  &lt NAV DEL
             >;
@@ -95,7 +98,7 @@
 
             bindings = <
                             &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
-                            &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &sk RSHFT  &sk RGUI   &sk RALT   &sk RCTRL
+                            &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC     &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TAB))  &kp LG(TAB)   &none    &none      &none      &none      &none      &none      &none
                                                     &kp RET    &kp SPACE   &kp TAB     &trans     &trans     &trans
             >;
@@ -124,7 +127,7 @@
 
             bindings = <
                             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp LBKT   &kp LT     &kp EQUAL  &kp GT     &kp RBKT
-                            &sk LCTRL  &sk LALT   &sk LGUI   &sk LSHFT  &kp CARET   &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR   &kp RBRC
+                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp CARET   &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR   &kp RBRC
                 &none       &kp BSLH   &kp GRAVE  &kp TILDE  &kp SEMI   &kp UNDER   &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
                                                   &trans     &trans     &trans      &kp RSHFT  &kp BSPC   &kp DEL
             >;
@@ -153,7 +156,7 @@
 
             bindings = <
                             &none      &none      &none      &none      &none      &none      &kp N7     &kp N8     &kp N9     &kp N0
-                            &sk LCTRL  &sk LALT   &sk LGUI   &sk LSHFT  &none      &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
+                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none      &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
                 &none       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp MINUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &none
                                                   &trans     &trans     &trans     &kp RSHFT  &kp BSPC   &kp DEL
             >;
@@ -179,7 +182,7 @@
 
                         bindings = <
                             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &bt BT_SEL 2  &kp C_PREV   &kp C_PP   &kp C_NEXT   &none
-                            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &sk RSHFT    &sk RGUI   &sk RALT   &sk RCTRL
+                            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &kp RSHFT    &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC     &kp F11    &kp F12    &none      &none      &none      &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
                                                   &kp RET    &kp SPACE  &kp TAB    &trans        &trans     &trans
             >;
