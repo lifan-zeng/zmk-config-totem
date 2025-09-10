@@ -2,3 +2,4 @@ firmware
 firmware.zip
 .DS_STORE
 .vscode/
+*.png
