@@ -24,7 +24,6 @@
 &sk {
     release-after-ms = <2000>;
     quick-release;
-    /delete-property/ ignore-modifiers;
 };
 
 / {
@@ -119,7 +118,7 @@
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                             │   ctrl  │   alt   │   cmd   │  shift  │    ^    ││    {    │    (    │    :    │    )    │    }    │    
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-                  │    \    │    `    │    ~    │    ;    │    _    │         ││    &    │    *    │    +    │    -    │    /    │    |    │
+                  │         │    \    │    `    │    ~    │    ;    │    _    ││    &    │    *    │    +    │    -    │    /    │    |    │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                                 │    ▼    │    ▼    │    ▼    ││  ENTER  │   BSPC  │   DEL   │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
@@ -127,7 +126,7 @@
             bindings = <
                             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp LBKT   &kp LT     &kp EQUAL  &kp GT     &kp RBKT
                             &sk LCTRL  &sk LALT   &sk LGUI   &sk LSHFT  &kp CARET   &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR   &kp RBRC
-                &kp BSLH    &kp GRAVE  &kp TILDE  &kp SEMI   &kp UNDER  &none       &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
+                &none       &kp BSLH   &kp GRAVE  &kp TILDE  &kp SEMI   &kp UNDER   &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
                                                   &trans     &trans     &trans      &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
