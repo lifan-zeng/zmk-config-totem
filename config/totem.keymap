@@ -66,14 +66,14 @@
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │    Z    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,    │    .    │    /    │ REPEAT  │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                            │  ENTER  │  SPACE  │   TAB   ││  SHIFT  │  BSPC   │   DEL   │  
+                                            │   TAB   │  SPACE  │  ENTER  ││  SHIFT  │  BSPC   │   DEL   │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/ 
 
             bindings = <
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
                     &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G  &kp H  &hm_shift_r RSHFT J &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SQT
               &kp ESC      &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &key_repeat
-                                          &lt NUM RET    &kp SPACE  &lt SYM TAB   &kp RSHFT  &kp BSPC  &lt NAV DEL
+                                          &lt NUM TAB    &kp SPACE  &lt SYM RET   &kp RSHFT  &kp BSPC  &lt NAV DEL
             >;
         };
 
@@ -95,14 +95,14 @@
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │  PvTab  │  NxTab  │  PvWin  │  NxWin  │         ││         │         │         │         │         │         │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                            │  ENTER  │  SPACE  │   TAB   ││    ▼    │    ▼    │    ▼    │  
+                                            │   TAB   │  SPACE  │  ENTER  ││    ▼    │    ▼    │    ▼    │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
 
             bindings = <
                             &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
                             &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC     &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TAB))  &kp LG(TAB)   &none    &none      &none      &none      &none      &none      &none
-                                                    &kp RET    &kp SPACE   &kp TAB     &trans     &trans     &trans
+                                                    &kp TAB    &kp SPACE   &kp RET     &trans     &trans     &trans
             >;
         };
 
@@ -179,14 +179,14 @@
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
                   │   ESC   │   F11   │   F12   │   Bri+  │   Bri-  │         ││   BL0   │   vol-  │   vol+  │  mute   │         │         │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                                │  ENTER  │  SPACE  │   TAB   ││    ▼    │    ▼    │    ▼    │  
+                                                │   TAB   │  SPACE  │  ENTER  ││    ▼    │    ▼    │    ▼    │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
 
                         bindings = <
                             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &bt BT_SEL 2  &kp C_PREV   &kp C_PP   &kp C_NEXT   &none
                             &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &kp RSHFT    &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC     &kp F11    &kp F12    &C_BRI_INC &C_BRI_DEC &none      &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
-                                                  &kp RET    &kp SPACE  &kp TAB    &trans        &trans     &trans
+                                                  &kp TAB    &kp SPACE  &kp RET    &trans        &trans     &trans
             >;
         };
     };
