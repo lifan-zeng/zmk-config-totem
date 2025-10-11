@@ -101,7 +101,7 @@
             bindings = <
                             &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
                             &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
-                &kp ESC     &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TAB))  &kp LG(TAB)   &none    &none      &none      &none      &none      &none      &none
+                &kp ESC     &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LS(TILDE))  &kp LG(TILDE)   &none    &none      &none      &none      &none      &none      &none
                                                     &kp TAB    &kp SPACE   &kp RET     &trans     &trans     &trans
             >;
         };
