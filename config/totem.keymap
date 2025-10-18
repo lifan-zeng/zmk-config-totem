@@ -30,6 +30,7 @@
 
 #include "includes/behaviors_homerow_mods.dtsi"
 #include "includes/settings.dtsi"
+#include "includes/behaviors_mod_morph.dtsi"
 
 / {
     combos {
@@ -73,7 +74,7 @@
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
                     &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G  &kp H  &hm_shift_r RSHFT J &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SQT
               &kp ESC      &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &key_repeat
-                                          &lt NUM TAB    &kp SPACE  &lt SYM RET   &kp RSHFT  &kp BSPC  &lt NAV DEL
+                                          &lt NUM TAB    &kp SPACE  &lt SYM RET   &mm_shift_caps_word_r  &kp BSPC  &lt NAV DEL
             >;
         };
 
@@ -131,7 +132,7 @@
                             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp LBKT   &kp LT     &kp EQUAL  &kp GT     &kp RBKT
                             &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp CARET   &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR   &kp RBRC
                 &none       &kp BSLH   &kp GRAVE  &kp TILDE  &kp SEMI   &kp UNDER   &kp AMPS   &kp ASTERISK &kp PLUS &kp MINUS &kp SLASH &kp PIPE
-                                                  &trans     &trans     &trans      &kp RSHFT  &kp BSPC   &kp DEL
+                                                  &trans     &trans     &trans      &mm_shift_caps_word_r  &kp BSPC   &kp DEL
             >;
         };
 
@@ -160,7 +161,7 @@
                             &none      &none      &none      &none      &none      &none      &kp N7     &kp N8     &kp N9     &kp N0
                             &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none      &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
                 &none       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp MINUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &none
-                                                  &trans     &trans     &trans     &kp RSHFT  &kp BSPC   &kp DEL
+                                                  &trans     &trans     &trans     &mm_shift_caps_word_r  &kp BSPC   &kp DEL
             >;
         };
         function_layer {
