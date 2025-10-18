@@ -152,7 +152,7 @@
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                             │  ctrl   │   alt   │   cmd   │  shift  │         ││    +    │    4    │    5    │    6    │    *    │    
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-                  │         │   undo  │   cut   │   copy  │  paste  │   redo  ││    -    │    1    │    2    │    3    │    /    │         │
+                  │         │   undo  │   cut   │   copy  │  paste  │   redo  ││    -    │    1    │    2    │    3    │    /    │    .    │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                                 │    ▼    │    ▼    │    ▼    ││  SHIFT  │   BSPC  │   DEL   │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
@@ -160,7 +160,7 @@
             bindings = <
                             &none      &none      &none      &none      &none      &none      &kp N7     &kp N8     &kp N9     &kp N0
                             &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none      &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
-                &none       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp MINUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &none
+                &none       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp MINUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &kp DOT
                                                   &trans     &trans     &trans     &mm_shift_caps_word_r  &kp BSPC   &kp DEL
             >;
         };
