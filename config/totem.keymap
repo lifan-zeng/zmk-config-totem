@@ -90,9 +90,9 @@
                                                                        ╭╮╭╮╭╮╭╮
                                                                        │╰╯╰╯╰╯│
                         ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-                ╌┄┈┈───═╡   HOME  │   PGUP  │    ↑    │   PGDN  │  INSERT ││         │         │         │         │         │   
+                ╌┄┈┈───═╡   HOME  │   PGUP  │    ↑    │   PGDN  │  NewTab ││  INSERT │         │         │         │         │   
                         ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-                        │   END   │    ←    │    ↓    │    →    │   CAPS  ││         │  shift  │   cmd   │   alt   │  ctrl   │    
+                        │   END   │    ←    │    ↓    │    →    │         ││   CAPS  │  shift  │   cmd   │   alt   │  ctrl   │    
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │  PvWin  │  NxWin  │  PvTab  │  NxTab  │  ClsTab ││         │         │         │         │         │         │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -100,9 +100,9 @@
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
 
             bindings = <
-                          &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp INS     &none      &none      &none      &none      &none
-                          &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp CAPS    &none      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
-                &kp ESC   &kp LG(LS(TILDE))   &kp LG(TILDE)   &kp LG(LS(LBKT))  &kp LG(LS(RBKT))   &kp LG(W)    &none      &none      &none      &none      &none      &none
+                          &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp LG(T)     &kp INS      &none      &none      &none      &none
+                          &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &none    &kp CAPS      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
+                &kp ESC   &kp LG(LS(GRAVE))   &kp LG(GRAVE)   &kp LG(LS(LBKT))  &kp LG(LS(RBKT))   &kp LG(W)    &none      &none      &none      &none      &none      &none
                                                     &kp TAB    &kp SPACE   &kp RET     &trans     &trans     &trans
             >;
         };
