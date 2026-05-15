@@ -41,5 +41,20 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        cmd_tab_num: cmd_tab_num_layer {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sl 3>, <&kp TAB>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        
+        bspc_del: bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 };

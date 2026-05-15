@@ -33,6 +33,14 @@
 #include "includes/behaviors_mod_morph.dtsi"
 
 / {
+    behaviors {
+        swapper: swapper {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp TAB>;
+            ignored-key-positions = <16>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_nav {
@@ -44,6 +52,21 @@
             timeout-ms = <50>;
             key-positions = <35 36>;
             bindings = <&mo 4>;
+        };
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <2 3>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <30>;
+            key-positions = <23 24>;
+            bindings = <&kp TAB>;
+        };
+        combo_cancel {
+            timeout-ms = <30>;
+            key-positions = <27 28>;
+            bindings = <&kp K_CANCEL>;
         };
     };
     keymap {
@@ -67,14 +90,14 @@
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │    Z    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,    │    .    │    /    │ CANCEL  │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                            │   TAB   │  SPACE  │  ENTER  ││  SHIFT  │  BSPC   │   DEL   │  
+                                            │   NUM   │  SPACE  │   SYM   ││  SHIFT  │  BSPC   │   RET   │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/ 
 
             bindings = <
                            &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P
                     &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G  &kp H  &hm_shift_r RSHFT J &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SQT
               &kp ESC      &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &kp K_CANCEL
-                                          &lt NUM TAB    &kp SPACE  &lt SYM RET   &mm_shift_caps_word_r  &kp BSPC  &lt NAV DEL
+                                          &cmd_tab_num    &kp SPACE  &sl SYM   &mm_shift_caps_word_r  &bspc_del  &lt NAV RET
             >;
         };
 
@@ -96,14 +119,14 @@
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │  PvWin  │  NxWin  │  PvTab  │  NxTab  │  ClsTab ││         │         │         │         │         │         │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                            │   TAB   │  SPACE  │  ENTER  ││    ▼    │    ▼    │    ▼    │  
+                                            │  CmdTab │  SPACE  │         ││    ▼    │    ▼    │    ▼    │  
                                             └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
 
             bindings = <
                           &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp LG(T)     &kp INS      &none      &none      &none      &none
                           &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &none    &kp CAPS      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC   &kp LG(LS(GRAVE))   &kp LG(GRAVE)   &kp LG(LS(LBKT))  &kp LG(LS(RBKT))   &kp LG(W)    &none      &none      &none      &none      &none      &none
-                                                    &kp TAB    &kp SPACE   &kp RET     &trans     &trans     &trans
+                                                    &swapper  &kp SPACE  &none     &trans     &trans     &trans
             >;
         };
 
@@ -121,18 +144,18 @@
                             ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
                     ╌┄┈┈───═╡    !    │    @    │    #    │    $    │    %    ││    <    │    _    │    [    │    ]    │    >    │   
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-                            │   ctrl  │   alt   │   cmd   │  shift  │    ^    ││    +    │    =    │    (    │    )    │    *    │    
+                            │   ctrl  │   alt   │   cmd   │  shift  │    ^    ││    -    │    :    │    (    │    )    │    *    │    
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-                  │         │    ~    │    |    │    &    │    `    │    \    ││    -    │    :    │    {    │    }    │    /    │    ;    │
+                  │         │    ~    │    |    │    &    │    `    │    \    ││    +    │    =    │    {    │    }    │    /    │    ;    │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                                │    ▼    │    ▼    │    ▼    ││  SHIFT  │   BSPC  │   DEL   │  
+                                                │    ▼    │    ▼    │    ▼    ││    ;    │   BSPC  │   RET   │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
 
             bindings = <
                             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp LT     &kp UNDER      &kp LBKT   &kp RBKT   &kp GT
-                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp CARET   &kp PLUS   &kp EQUAL   &kp LPAR   &kp RPAR   &kp STAR
-                &none       &kp TILDE  &kp PIPE   &kp AMPS   &kp GRAVE  &kp BSLH    &kp MINUS  &kp COLON   &kp LBRC   &kp RBRC   &kp SLASH  &kp SEMI
-                                                  &trans     &trans     &trans      &mm_shift_caps_word_r  &kp BSPC   &kp DEL
+                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp CARET   &kp MINUS   &kp COLON   &kp LPAR   &kp RPAR   &kp STAR
+                &none       &kp TILDE  &kp PIPE   &kp AMPS   &kp GRAVE  &kp BSLH    &kp PLUS  &kp EQUAL   &kp LBRC   &kp RBRC   &kp SLASH  &kp SEMI
+                                                  &trans     &trans     &trans      &kp SEMI  &bspc_del   &kp RET
             >;
         };
 
@@ -148,20 +171,20 @@
                                                                            ╭╮╭╮╭╮╭╮
                                                                            │╰╯╰╯╰╯│
                             ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-                    ╌┄┈┈───═╡         │         │         │         │         ││    .    │    7    │    8    │    9    │    0    │   
+                    ╌┄┈┈───═╡ sel all │         │         │         │         ││    .    │    7    │    8    │    9    │    0    │   
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-                            │  ctrl   │   alt   │   cmd   │  shift  │   find  ││    +    │    4    │    5    │    6    │    *    │    
+                            │  ctrl   │   alt   │   cmd   │  shift  │   find  ││    -    │    4    │    5    │    6    │    *    │    
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-                  │ sel all │   undo  │   cut   │   copy  │  paste  │   redo  ││    -    │    1    │    2    │    3    │    /    │    ,    │
+                  │ sel all │   undo  │   cut   │   copy  │  paste  │   redo  ││    +    │    1    │    2    │    3    │    /    │    ,    │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                                │    ▼    │    ▼    │    ▼    ││    0    │   BSPC  │   DEL   │  
+                                                │    ▼    │    ▼    │    ▼    ││    ,    │   BSPC  │   RET   │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
 
             bindings = <
-                            &none      &none      &none      &none      &none      &kp DOT      &kp N7     &kp N8     &kp N9     &kp N0
-                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp LG(F)      &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
-                &kp LG(A)   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp MINUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &kp COMMA
-                                                  &trans     &trans     &trans     &kp N0  &kp BSPC   &kp DEL
+                            &kp LG(A)      &none      &none      &none      &none      &kp DOT      &kp N7     &kp N8     &kp N9     &kp N0
+                            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp LG(F)      &kp MINUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
+                &kp LG(A)   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp PLUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &kp COMMA
+                                                  &trans     &trans     &trans     &kp COMMA  &bspc_del   &kp RET
             >;
         };
         function_layer {
@@ -178,16 +201,16 @@
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                             │    F6   │   F7    │   F8    │   F9    │   F10   ││   BL1   │  shift  │   cmd   │   alt   │   ctrl  │   
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-                  │   ESC   │   F11   │   F12   │   Bri-  │   Bri+  │         ││   BL0   │   vol-  │   vol+  │  mute   │         │         │
+                  │   ESC   │   F11   │   F12   │   Bri-  │   Bri+  │ BT_CLR  ││   BL0   │   vol-  │   vol+  │  mute   │         │         │
                   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                                │   TAB   │  SPACE  │  ENTER  ││    ▼    │    ▼    │    ▼    │  
+                                                │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │    ▼    │  
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
 
                         bindings = <
                             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &bt BT_SEL 2  &kp C_PREV   &kp C_PP   &kp C_NEXT   &none
                             &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &bt BT_SEL 1  &kp RSHFT    &kp RGUI   &kp RALT   &kp RCTRL
-                &kp ESC     &kp F11    &kp F12 &kp C_BRI_DEC &kp C_BRI_INC &none      &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
-                                                  &kp TAB    &kp SPACE  &kp RET    &trans        &trans     &trans
+                &kp ESC     &kp F11    &kp F12 &kp C_BRI_DEC &kp C_BRI_INC &bt BT_CLR   &bt BT_SEL 0  &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE  &none     &none
+                                                  &trans    &trans  &trans    &trans        &trans     &trans
             >;
         };
     };
