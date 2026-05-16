@@ -115,7 +115,7 @@
                         ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
                 ╌┄┈┈───═╡   HOME  │   PGUP  │    ↑    │   PGDN  │  NewTab ││  INSERT │         │         │         │         │   
                         ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-                        │   END   │    ←    │    ↓    │    →    │         ││   CAPS  │  shift  │   cmd   │   alt   │  ctrl   │    
+                        │   END   │    ←    │    ↓    │    →    │  Reload ││   CAPS  │  shift  │   cmd   │   alt   │  ctrl   │    
               ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
               │   ESC   │  PvWin  │  NxWin  │  PvTab  │  NxTab  │  ClsTab ││         │         │         │         │         │         │
               └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
@@ -124,7 +124,7 @@
 
             bindings = <
                           &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp LG(T)     &kp INS      &none      &none      &none      &none
-                          &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &none    &kp CAPS      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
+                          &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp LG(R)    &kp CAPS      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
                 &kp ESC   &kp LG(LS(GRAVE))   &kp LG(GRAVE)   &kp LG(LS(LBKT))  &kp LG(LS(RBKT))   &kp LG(W)    &none      &none      &none      &none      &none      &none
                                                     &swapper  &kp SPACE  &none     &trans     &trans     &trans
             >;
