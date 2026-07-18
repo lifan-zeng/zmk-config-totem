@@ -56,5 +56,19 @@
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        tab_nav_fwd: tab_nav_fwd {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(RBKT))>, <&kp LC(LS(PG_DN))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        tab_nav_bck: tab_nav_bck {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(LBKT))>, <&kp LC(LS(PG_UP))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };

@@ -130,7 +130,7 @@
             bindings = <
                           &kp HOME    &kp PG_UP   &kp UP     &kp PG_DN   &kp LG(T)     &kp INS      &none      &none      &none      &none
                           &kp END     &kp LEFT    &kp DOWN   &kp RIGHT   &kp LG(R)    &kp CAPS      &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL
-                &kp ESC   &kp LG(LS(GRAVE))   &kp LG(GRAVE)   &kp LG(LS(LBKT))  &kp LG(LS(RBKT))   &kp LG(W)    &none      &none      &none      &none      &none      &none
+                &kp ESC   &kp LG(LS(GRAVE))   &kp LG(GRAVE)  &tab_nav_bck  &tab_nav_fwd   &kp LG(W)    &none      &none      &none      &none      &none      &none
                                                     &swapper  &kp SPACE  &none     &trans     &trans     &trans
             >;
         };
@@ -176,7 +176,7 @@
                                                                            ╭╮╭╮╭╮╭╮
                                                                            │╰╯╰╯╰╯│
                             ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-                    ╌┄┈┈───═╡ sel all │         │         │         │         ││    .    │    7    │    8    │    9    │    0    │   
+                    ╌┄┈┈───═╡ sel all │         │         │         │  NewTab ││    .    │    7    │    8    │    9    │    0    │   
                             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
                             │  ctrl   │   alt   │   cmd   │  shift  │   find  ││    -    │    4    │    5    │    6    │    *    │    
                   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
@@ -186,7 +186,7 @@
                                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
 
             bindings = <
-                            &kp LG(A)      &none      &none      &none      &none      &kp DOT      &kp N7     &kp N8     &kp N9     &kp N0
+                            &kp LG(A)      &none      &none      &none  &kp LG(T)      &kp DOT      &kp N7     &kp N8     &kp N9     &kp N0
                             &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &kp LG(F)      &kp MINUS   &kp N4     &kp N5     &kp N6     &kp ASTERISK
                 &kp LG(A)   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LS(Z))   &kp PLUS  &kp N1     &kp N2     &kp N3     &kp SLASH   &kp COMMA
                                                   &trans     &trans     &trans     &kp COMMA  &bspc_del   &kp RET
