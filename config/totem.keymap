@@ -46,7 +46,7 @@
         combo_nav {
             timeout-ms = <50>;
             key-positions = <33 34>;
-            bindings = <&mo 1>;
+            bindings = <&lt 1 LG(SPACE)>;
         };
         combo_fun {
             timeout-ms = <50>;
